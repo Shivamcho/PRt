@@ -1,0 +1,14 @@
+---
+- name: Installing apache2 on Instance2
+  hosts: prod
+  become: true
+  tasks:
+  - name: Installing apache2
+    apt: name=apache2 state=latest
+
+- name: Installing apache2 on Instance3
+  hosts: test
+  become: true
+  tasks:
+  - name: Installing nginx
+    apt: name=nginx state=latest
